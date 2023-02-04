@@ -1,0 +1,32 @@
+
+
+
+知识点：
+    1、构架工具 Vite。
+    2、前端框架 React 和路由 react-router-dom。
+    3、CSS 预加载器 Less。
+    4、HTTP 请求库 axios。
+    5、移动端分辨率适配 flexible。
+    6、跨域代理。
+
+初始化项目：npm init @vitejs/app react-vite-h5 -- --template react
+启动项目：npm run dev
+
+
+H5项目
+
+mainjs：
+    // 一、使用 lib-flexible 包适配rem移动端项目
+    // 二、根使用 BrowserRouter 包裹App组件
+
+Appjs：
+
+Loginjs：
+    // 一、根据type的值 渲染标题 | 展示登陆还是注册文字 | 展示登陆还是注册的内容 | 提交时是注册还是登陆 | 渲染样式(login/register)
+
+Account: 
+    // 一、使用 rc-form 包进行修改原密码与新密码 | createForm()、getFieldProps()、validateFields()
+
+UserInfo:
+    // 一、使用 FilePicker 组件上传头像功能 | axios及token发送到后台
+
