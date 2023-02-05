@@ -4,23 +4,22 @@
 
 *启动项目*：`npm run dev`
 
+知识点
 
-
-**知识点：**
-    1、构架工具 Vite。
-    2、前端框架 React 和路由 react-router-dom。
-    3、CSS 预加载器 Less。
-    4、HTTP 请求库 axios。
-    5、移动端分辨率适配 flexible。
-    6、跨域代理。
-    7、useRef()
+1. 构架工具 Vite。
+2. 前端框架 React 和路由 react-router-dom。
+3. CSS 预加载器 Less。
+4. HTTP 请求库 axios。
+5. 移动端分辨率适配 flexible。
+6. 跨域代理。
+7. useRef()
 
 * [ ] DataJs中    CSS样式书写
+* [ ] Function组件形式  H5项目
 
-Function组件形式  H5项目
+
+
     packageJson：`444 4`
-
-
 
 component
     BillItemjs:
@@ -31,7 +30,6 @@ component
 // 三、渲染每个item： { bill && bill.bills.sort((a, b) => b.date - a.date).map(item => <Cell></Cell>) }
 
 ```
-
 
     NavBarjs:
     PopupAddBilljs:
