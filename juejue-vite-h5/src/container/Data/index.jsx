@@ -9,7 +9,7 @@ import s from './style.module.less';
 
 let proportionChart = null   // 用于存放 echart 初始化返回的实例
 
-
+// 一、
 
 
 /***--- 账单统计页：1、Echart 引入和使用  2、进度条组件 Progress 的使用 ---**/
@@ -110,7 +110,12 @@ const  Data = () => {
     setCurrentMonth(item)
   }
 
+
+
+
+
   return <div className={s.data}>
+
     <div className={s.total}>
       <div className={s.time} onClick={monthShow}>
         <span>{currentMonth}</span>
@@ -120,12 +125,18 @@ const  Data = () => {
       <div className={s.expense}>¥{ totalExpense }</div>
       <div className={s.income}>共收入¥{ totalIncome }</div>
     </div>
+
     <div className={s.structure}>
       <div className={s.head}>
         <span className={s.title}>收支构成</span>
         <div className={s.tab}>
           <span onClick={() => changeTotalType('expense')} className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}>支出</span>
-          <span onClick={() => changeTotalType('income')} className={cx({ [s.income]: true, [s.active]: totalType == 'income' })}>收入</span>
+          <span 
+            onClick={() => { /* console.log([s.income]); */ return changeTotalType('income') }} 
+            className={cx({ [s.income]: true, [s.active]: totalType == 'income' })}
+          >
+            收入
+          </span>
         </div>
       </div>
       <div className={s.content}>
@@ -154,6 +165,7 @@ const  Data = () => {
           </div>)
         }
       </div>
+
       <div className={s.proportion}>
         <div className={s.head}>
           <span className={s.title}>收支构成</span>
@@ -166,7 +178,9 @@ const  Data = () => {
         <div id="proportion"></div>
       </div>
     </div>
+
     <PopupDate ref={monthRef} mode="month" onSelect={selectMonth} />
+    
   </div>
 }
 

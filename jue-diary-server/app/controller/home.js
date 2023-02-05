@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 const Controller = require("egg").Controller;
 
-/**--- 第4节、后端预备中的增删改查案例 ---**/
+/** --- 第4节、后端预备中的增删改查案例 ---**/
 class HomeController extends Controller {
   // 查询
   async user() {
@@ -19,7 +19,7 @@ class HomeController extends Controller {
       const result = await ctx.service.home.addUser(name);
       ctx.body = {
         code: 200,
-        msg: "添加成功",
+        msg: '添加成功',
         data: null,
       };
     } catch (error) {
