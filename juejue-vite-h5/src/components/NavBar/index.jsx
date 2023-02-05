@@ -12,6 +12,8 @@ const NavBar = ({ showNav }) => {
 
   /***--- 所以当你点击导航栏的时候，changeTab 方法便会被触发，执行内部的 setActiveKey 和 navigateTo，他们的作用分别是设置当前点击的高亮和让页面跳转到对应的页面组件 ---**/
   const chnageTab = (path) => {
+    
+    // console.log(path)
     setActiveKey(path)
     history.push(path)
   }

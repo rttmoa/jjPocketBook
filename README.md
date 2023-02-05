@@ -14,8 +14,10 @@
 
 **启动项目**：`npm run dev`
 
+* [ ] Datajs中    CSS
+
 H5项目
-    packageJson：
+    packageJson：`444 4`
 
 component
     BillItemjs:
@@ -28,7 +30,7 @@ mainjs：
 
 Appjs：
     // 一、引入路由配置 渲染路由配置数据  useEffect监听location.pathname的值
-    // 二、设置是否显示NavBar导航组件
+    // 二、设置是否显示NavBar导航组件 || NavBar组件的封装
 
 Loginjs：
     // 一、根据type的值 渲染标题 | 展示登陆还是注册文字 | 展示登陆还是注册的内容 | 提交时是注册还是登陆 | 渲染样式(login/register)
