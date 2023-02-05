@@ -8,6 +8,10 @@ import { typeMap } from '@/utils'; // 消费类型的键值对、key为id、valu
 
 import s from './style.module.less';
 
+
+
+
+
 const BillItem = ({ bill }) => {
   const [income, setIncome] = useState(0); // 收入
   const [expense, setExpense] = useState(0); // 支出

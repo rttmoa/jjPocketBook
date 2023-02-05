@@ -12,7 +12,14 @@ import { get, post, typeMap } from '@/utils';
 import s from './style.module.less'
 
 
+// 一、进入账单详情页面 使用 query-string 包将地址栏中的参数 转换为对象格式 || qs.parse("?id=917&uname=zhangsan") // {id: '917', uname: 'zhangsan'}
+// 二、使用dayjs格式化日期
+// 三、前台获取后台接口数据 使用`/api/bill/detail?id=${id}`格式获取
 
+
+
+
+// console.log(dayjs(new Date()).format('YYYY-MM-DD HH:mm:ss'))
 
 /***--- 账单详情页 ---**/
 const Detail = () => {
@@ -20,6 +27,9 @@ const Detail = () => {
   const location = useLocation(); // 获取 locaton 实例，我们可以通过打印查看内部都有些什么内容。
   const history = useHistory();
   const { id } = qs.parse(location.search); // 我们想要的参数在 search 属性中，我想把 ?id=917 转换成 json 键值对的形式{id:917}
+  // console.log(location) // 获取地址栏信息
+  // console.log(qs.parse("?id=917")) // {id: '917'}
+  // console.log(qs.parse("?id=917&uname=zhangsan")) // {id: '917', uname: 'zhangsan'}
 
   const [detail, setDetail] = useState({});
   
@@ -29,6 +39,7 @@ const Detail = () => {
   /***--- 账单明细：我们通过列表页传入的浏览器查询字符串，通俗的将就是浏览器地址栏上的参数，来获取该笔账单的详情 ---**/
   const getDetail = async () => {
     const { data } = await get(`/api/bill/detail?id=${id}`);
+    // console.log(data)
     setDetail(data);
   }
 

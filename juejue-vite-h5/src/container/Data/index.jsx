@@ -20,6 +20,7 @@ let proportionChart = null   // 用于存放 echart 初始化返回的实例
 /***--- 账单统计页：1、Echart 引入和使用  2、进度条组件 Progress 的使用 ---**/
 // 通过indexhtml引入Echat：<script src="//s.yezgea02.com/1609305532675/echarts.js"></script>
 const  Data = () => {
+  
   const monthRef = useRef();
   const [totalType, setTotalType] = useState('expense'); // 收入或支出类型
   const [currentMonth, setCurrentMonth] = useState(dayjs().format('YYYY-MM'));
@@ -46,7 +47,7 @@ const  Data = () => {
     const { data } = await get(`/api/bill/data?date=${currentMonth}`);  // 根据初始化的时间发请求 | 选择后的日期发请求
     // 获取的参数：账单金额、账单类型、账单种类、账单种类名称
     
-    console.log(data)
+    // console.log(data)
     
     setTotalExpense(data.total_expense); // 总收支
     setTotalIncome(data.total_income); // 总收入

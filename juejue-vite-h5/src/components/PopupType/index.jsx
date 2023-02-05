@@ -13,8 +13,8 @@ import s from './style.module.less'
 const PopupType = forwardRef(({ onSelect }, ref) => {
   const [show, setShow] = useState(false);
   const [active, setActive] = useState('all');
-  const [expense, setExpense] = useState([]);
-  const [income, setIncome] = useState([]);
+  const [expense, setExpense] = useState([]);  // 支出类型
+  const [income, setIncome] = useState([]);    // 收入类型
 
 
   useEffect(() => {

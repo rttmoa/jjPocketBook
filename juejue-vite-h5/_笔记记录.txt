@@ -8,6 +8,7 @@
     4、HTTP 请求库 axios。
     5、移动端分辨率适配 flexible。
     6、跨域代理。
+    7、useRef()
 
 初始化项目：npm init @vitejs/app react-vite-h5 -- --template react
 启动项目：npm run dev
@@ -16,7 +17,9 @@
 H5项目
 
 component
-
+    BillItemjs:
+    NavBarjs:
+    PopupAddBilljs:
 
 
 mainjs：
@@ -44,6 +47,8 @@ Datajs：
 
 
 Detailjs：
-
+    // 一、进入账单详情页面 使用 query-string 包将地址栏中的参数 转换为对象格式 || qs.parse("?id=917&uname=zhangsan") // {id: '917', uname: 'zhangsan'}
+    // 二、使用dayjs格式化日期
+    // 三、前台获取后台接口数据 使用`/api/bill/detail?id=${id}`格式获取
 
 HomeJs：
