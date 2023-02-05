@@ -65,6 +65,7 @@ const Home = () => {
 
   // 请求列表数据
   const refreshData = () => {
+    console.log("上拉加载状态")
     setRefreshing(REFRESH_STATE.loading);
     if (page != 1) {
       setPage(1);
@@ -74,24 +75,19 @@ const Home = () => {
   };
 
   const loadData = () => {
+    // console.log(page)
     if (page < totalPage) {
       setLoading(LOAD_STATE.loading);
       setPage(page + 1);
     }
   }
 
-  // 添加账单弹窗
-  const toggle = () => {
-    typeRef.current && typeRef.current.show()    // 打印typeRef属性会有close和show方法
-  };
-  // 选择月份弹窗
-  const monthToggle = () => {
-    monthRef.current && monthRef.current.show()
-  };
-  // 添加账单弹窗
-  const addToggle = () => {
-    addRef.current && addRef.current.show()
-  }
+  /***--- 选择收入支出类型弹窗 ---**/
+  const toggle = () => { typeRef.current && typeRef.current.show() };
+  /***--- 选择月份弹窗 ---**/
+  const monthToggle = () => { monthRef.current && monthRef.current.show() };
+  /***--- 添加账单弹窗 ---**/
+  const addToggle = () => { addRef.current && addRef.current.show() }
 
   // 筛选类型
   const select = (item) => {
@@ -132,7 +128,7 @@ const Home = () => {
       {
         // 如果有数据、取反查看Empty组件 || 如果有数据、渲染下载组件包裹所有的数据
         list.length ? <Pull
-          animationDuration={200}
+          animationDuration={500}
           stayTime={400}
           refresh={{
             state: refreshing,

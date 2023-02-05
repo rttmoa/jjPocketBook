@@ -29,6 +29,8 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
   const [date, setDate] = useState(new Date()); // 日期
  
 
+
+
   useEffect(() => {
     if (detail.id) {
       setPayType(detail.pay_type == 1 ? 'expense' : 'income')
@@ -78,28 +80,23 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
   };
 
   // 日期弹窗
-  const handleDatePop = () => {
-    dateRef.current && dateRef.current.show()
-  }
+  const handleDatePop = () => { dateRef.current && dateRef.current.show() }
 
   // 日期选择回调
-  const selectDate = (val) => {
-    setDate(val)
-  }
+  const selectDate = (val) => { setDate(val) }
 
   // 选择账单类型
-  const choseType = (item) => {
-    setCurrentType(item)
-  }
+  const choseType = (item) => { setCurrentType(item) }
 
   // 监听输入框改变值
   const handleMoney = (value) => {
+    // console.log(value)
     value = String(value)
     if (value == 'close') return 
     // 点击是删除按钮时
     if (value == 'delete') {
       let _amount = amount.slice(0, amount.length - 1)
-      setAmount(_amount)
+      setAmount(_amount);
       return
     }
     // 点击确认按钮时
@@ -208,10 +205,14 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
         }
       </div>
       {/* 数组键盘 */}
-      <Keyboard type="price" onKeyClick={(value) => handleMoney(value)} />
+      {/* <Keyboard type="price" onKeyClick={(value) => {console.log(value); handleMoney(value)} } /> */}
+      <Keyboard type="price" onKeyClick={handleMoney} />
       <PopupDate ref={dateRef} onSelect={selectDate} />
     </div>
   </Popup>
+
+
+
 });
 
 PopupAddBill.propTypes = {

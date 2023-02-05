@@ -10,6 +10,9 @@ import s from './style.module.less';
 
 
 
+// 一、通过点击的哪个item跳转到详情页去：const goToDetail = (item) => { history.push(`/detail?id=${item.id}`) };
+// 二、计算总收入/支出：const _income = bill.bills.filter(i => i.pay_type == 2).reduce((curr, item) => {curr += Number(item.amount); return curr; }, 0);
+// 三、渲染每个item： { bill && bill.bills.sort((a, b) => b.date - a.date).map(item => <Cell></Cell>) }
 
 
 const BillItem = ({ bill }) => {
@@ -20,8 +23,9 @@ const BillItem = ({ bill }) => {
   // 当添加账单是，bill.bills 长度变化，触发当日收支总和计算。
   useEffect(() => {
     // 初始化将传入的 bill 内的 bills 数组内数据项，过滤出支出和收入。
-    // pay_type：1 为支出；2 为收入
-    // 通过 reduce 累加
+
+    // console.log(bill)
+    // 先根据每天收入类型为2的返回值  账单中每个数值进行相加
     const _income = bill.bills.filter(i => i.pay_type == 2).reduce((curr, item) => {
       curr += Number(item.amount);
       return curr;
@@ -34,10 +38,10 @@ const BillItem = ({ bill }) => {
     setExpense(_expense);
   }, [bill.bills]);
 
-  // 前往账单详情
-  const goToDetail = (item) => {
-    history.push(`/detail?id=${item.id}`)
-  };
+  /***--- 前往账单详情 ---**/
+  const goToDetail = (item) => { history.push(`/detail?id=${item.id}`) };
+
+
 
   return <div className={s.item}>
     <div className={s.headerDate}>
@@ -67,13 +71,17 @@ const BillItem = ({ bill }) => {
             <span>{ item.type_name }</span>
           </>
         }
-        description={<span style={{ color: item.pay_type == 2 ? 'red' : '#39be77' }}>{`${item.pay_type == 1 ? '-' : '+'}${item.amount}`}</span>}
+        description={<span style={{ color: item.pay_type == 2 ? 'red' : '#39be77' }}>
+          {`${item.pay_type == 1 ? '-' : '+'}${item.amount}`}
+        </span>}
         help={<div>{dayjs(Number(item.date)).format('HH:mm')} {item.remark ? `| ${item.remark}` : ''}</div>}
       >
       </Cell>)
     }
   </div>
 };
+
+
 
 BillItem.propTypes = {
   bill: PropTypes.object

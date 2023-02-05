@@ -1,7 +1,12 @@
 # 掘掘记账本
 
+*初始化项目*：`npm init @vitejs/app react-vite-h5 -- --template react`
 
-知识点：
+*启动项目*：`npm run dev`
+
+
+
+**知识点：**
     1、构架工具 Vite。
     2、前端框架 React 和路由 react-router-dom。
     3、CSS 预加载器 Less。
@@ -10,17 +15,22 @@
     6、跨域代理。
     7、useRef()
 
-**初始化项目**：`npm init @vitejs/app react-vite-h5 -- --template react`
+* [ ] DataJs中    CSS样式书写
 
-**启动项目**：`npm run dev`
-
-* [ ] Datajs中    CSS
-
-H5项目
+Function组件形式  H5项目
     packageJson：`444 4`
 
 component
     BillItemjs:
+
+```
+// 一、通过点击的哪个item跳转到详情页去：const goToDetail = (item) => { history.push(`/detail?id=${item.id}`) };
+// 二、计算总收入/支出：const _income = bill.bills.filter(i => i.pay_type == 2).reduce((curr, item) => {curr += Number(item.amount); return curr; }, 0);
+// 三、渲染每个item： { bill && bill.bills.sort((a, b) => b.date - a.date).map(item => <Cell></Cell>) }
+
+```
+
+
     NavBarjs:
     PopupAddBilljs:
 
