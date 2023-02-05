@@ -1,4 +1,4 @@
-
+# 掘掘记账本
 
 
 知识点：
@@ -10,33 +10,30 @@
     6、跨域代理。
     7、useRef()
 
-初始化项目：npm init @vitejs/app react-vite-h5 -- --template react
-启动项目：npm run dev
+**初始化项目**：`npm init @vitejs/app react-vite-h5 -- --template react`
 
+**启动项目**：`npm run dev`
 
 H5项目
     packageJson：
-
-
 
 component
     BillItemjs:
     NavBarjs:
     PopupAddBilljs:
 
-
 mainjs：
     // 一、使用 lib-flexible 包适配rem移动端项目
     // 二、根使用 BrowserRouter 包裹App组件
 
 Appjs：
-    // 一、引入路由配置 渲染路由配置数据  useEffect监听location.pathname的值 
+    // 一、引入路由配置 渲染路由配置数据  useEffect监听location.pathname的值
     // 二、设置是否显示NavBar导航组件
 
 Loginjs：
     // 一、根据type的值 渲染标题 | 展示登陆还是注册文字 | 展示登陆还是注册的内容 | 提交时是注册还是登陆 | 渲染样式(login/register)
 
-Accountjs: 
+Accountjs:
     // 一、使用 rc-form 包进行修改原密码与新密码 | createForm()、getFieldProps()、validateFields()
 
 UserInfojs:
@@ -44,16 +41,15 @@ UserInfojs:
 
 Datajs：
     // 收支构成百分比和饼图
-    // 一、根据totalType的类型 判断是收入和支出  
+    // 一、根据totalType的类型 判断是收入和支出
     // 二、使用classnames进行写表达式判断是收入还是支出 || className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
     // 三、收支构成即渲染支出数据又渲染收入数据 | 根据classnames及表达式渲染类型
     // 四、进度条渲染百分比
     // 五、根据页面内日期变化发请求 const { data } = await get(`/api/bill/data?date=${currentMonth}`);
 
-
 Detailjs：
     // 一、进入账单详情页面 使用 query-string 包将地址栏中的参数 转换为对象格式 || qs.parse("?id=917&uname=zhangsan") // {id: '917', uname: 'zhangsan'}
     // 二、使用dayjs格式化日期
-    // 三、前台获取后台接口数据 使用`/api/bill/detail?id=${id}`格式获取
+    // 三、前台获取后台接口数据 使用 `/api/bill/detail?id=${id}`格式获取
 
 HomeJs：
