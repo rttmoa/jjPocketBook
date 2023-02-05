@@ -5,6 +5,14 @@ import routes from '@/router';  // 引入路由配置，实现切换浏览器路
 import NavBar from '@/components/NavBar';
 
 
+
+
+
+
+// 一、引入路由配置 渲染路由配置数据  useEffect监听location.pathname的值 
+// 二、设置是否显示NavBar导航组件
+
+
 const  App = () => {
   const location = useLocation() // 拿到 location 实例
   const { pathname } = location // 获取当前路径

@@ -15,7 +15,7 @@ let proportionChart = null   // 用于存放 echart 初始化返回的实例
 // 二、使用classnames进行写表达式判断是收入还是支出 || className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
 // 三、收支构成即渲染支出数据又渲染收入数据 | 根据classnames及表达式渲染类型
 // 四、进度条渲染百分比
-
+// 五、根据页面内日期变化发请求 const { data } = await get(`/api/bill/data?date=${currentMonth}`);
 
 /***--- 账单统计页：1、Echart 引入和使用  2、进度条组件 Progress 的使用 ---**/
 // 通过indexhtml引入Echat：<script src="//s.yezgea02.com/1609305532675/echarts.js"></script>
