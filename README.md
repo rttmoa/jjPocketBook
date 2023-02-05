@@ -20,6 +20,8 @@
 Function组件形式  H5项目
     packageJson：`444 4`
 
+
+
 component
     BillItemjs:
 
