@@ -4,7 +4,8 @@
 
 *启动项目*：`npm run dev`
 
-知识点
+
+**知识点==>**
 
 1. 构架工具 Vite。
 2. 前端框架 React 和路由 react-router-dom。
@@ -14,12 +15,16 @@
 6. 跨域代理。
 7. useRef()
 
-* [ ] DataJs中    CSS样式书写
+
+
 * [ ] Function组件形式  H5项目
+* [ ] DataJs中    CSS样式书写
+* [ ] 
 
 
 
-    packageJson：`444 4`
+**package.Json：**`classnames | dayjs | lib-flexible | pushstate-server | query-string | rc-form | react-captcha-code | zarm `
+
 
 component
     BillItemjs:
