@@ -15,18 +15,35 @@
 
 H5项目
 
+component
+
+
+
 mainjs：
     // 一、使用 lib-flexible 包适配rem移动端项目
     // 二、根使用 BrowserRouter 包裹App组件
 
 Appjs：
 
+
 Loginjs：
     // 一、根据type的值 渲染标题 | 展示登陆还是注册文字 | 展示登陆还是注册的内容 | 提交时是注册还是登陆 | 渲染样式(login/register)
 
-Account: 
+Accountjs: 
     // 一、使用 rc-form 包进行修改原密码与新密码 | createForm()、getFieldProps()、validateFields()
 
-UserInfo:
+UserInfojs:
     // 一、使用 FilePicker 组件上传头像功能 | axios及token发送到后台
 
+Datajs：
+    // 收支构成百分比和饼图
+    // 一、根据totalType的类型 判断是收入和支出  
+    // 二、使用classnames进行写表达式判断是收入还是支出 || className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
+    // 三、收支构成即渲染支出数据又渲染收入数据 | 根据classnames及表达式渲染类型
+    // 四、进度条渲染百分比
+
+
+Detailjs：
+
+
+HomeJs：

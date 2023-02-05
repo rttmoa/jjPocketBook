@@ -9,7 +9,12 @@ import s from './style.module.less';
 
 let proportionChart = null   // 用于存放 echart 初始化返回的实例
 
-// 一、
+
+// 收支构成百分比和饼图
+// 一、根据totalType的类型 判断是收入和支出  
+// 二、使用classnames进行写表达式判断是收入还是支出 || className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
+// 三、收支构成即渲染支出数据又渲染收入数据 | 根据classnames及表达式渲染类型
+// 四、进度条渲染百分比
 
 
 /***--- 账单统计页：1、Echart 引入和使用  2、进度条组件 Progress 的使用 ---**/
@@ -24,6 +29,8 @@ const  Data = () => {
   const [incomeData, setIncomeData] = useState([]); // 收入数据
   const [pieType, setPieType] = useState('expense'); // 饼图的「收入」和「支出」控制
 
+
+
   useEffect(() => {
     getData()
     return () => {
@@ -35,18 +42,22 @@ const  Data = () => {
   
   // 获取数据详情
   const getData = async () => {
-    const { data } = await get(`/api/bill/data?date=${currentMonth}`);
+
+    const { data } = await get(`/api/bill/data?date=${currentMonth}`);  // 根据初始化的时间发请求 | 选择后的日期发请求
     // 获取的参数：账单金额、账单类型、账单种类、账单种类名称
     
-    // 总收支
-    setTotalExpense(data.total_expense);
-    setTotalIncome(data.total_income);
+    console.log(data)
+    
+    setTotalExpense(data.total_expense); // 总收支
+    setTotalIncome(data.total_income); // 总收入
   
     // 过滤支出和收入
     const expense_data = data.total_data.filter(item => item.pay_type == 1).sort((a, b) => b.number - a.number); // 过滤出账单类型为支出的项
     const income_data = data.total_data.filter(item => item.pay_type == 2).sort((a, b) => b.number - a.number); // 过滤出账单类型为收入的项
+    
     setExpenseData(expense_data);
     setIncomeData(income_data);
+
     // 绘制饼图
     setPieChart(pieType == 'expense' ? expense_data : income_data);
   };  
@@ -131,14 +142,14 @@ const  Data = () => {
         <span className={s.title}>收支构成</span>
         <div className={s.tab}>
           <span onClick={() => changeTotalType('expense')} className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}>支出</span>
-          <span 
+          <span
             onClick={() => { /* console.log([s.income]); */ return changeTotalType('income') }} 
             className={cx({ [s.income]: true, [s.active]: totalType == 'income' })}
           >
             收入
           </span>
         </div>
-      </div>
+      </div> 
       <div className={s.content}>
         {
           (totalType == 'expense' ? expenseData : incomeData).map(item => <div key={item.type_id} className={s.item}>
