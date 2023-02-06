@@ -4,7 +4,6 @@
 
 *启动项目*：`npm run dev`
 
-
 **知识点==>**
 
 1. 构架工具 Vite。
@@ -15,15 +14,12 @@
 6. 跨域代理。
 7. useRef()
 
-
-
 * [ ] Function组件形式  H5项目
 * [ ] DataJs中    CSS样式书写
-* [ ] 
-
-
+* [ ]
 
 **package.Json：**`classnames | dayjs | lib-flexible | pushstate-server | query-string | rc-form | react-captcha-code | zarm `
+
 
 
 component
@@ -40,21 +36,29 @@ component
     PopupAddBilljs:
 
 mainjs：
-    // 一、使用 lib-flexible 包适配rem移动端项目
-    // 二、根使用 BrowserRouter 包裹App组件
+
+```
+	使用 lib-flexible 包适配rem移动端项目
+	根使用 BrowserRouter 包裹App组件
+```
 
 Appjs：
-    // 一、引入路由配置 渲染路由配置数据  useEffect监听location.pathname的值
-    // 二、设置是否显示NavBar导航组件 || NavBar组件的封装
+
+```
+	引入路由配置 渲染路由配置数据  useEffect监听location.pathname的值
+    	设置是否显示NavBar导航组件 || NavBar组件的封装
+```
+
+装
 
 Loginjs：
-    // 一、根据type的值 渲染标题 | 展示登陆还是注册文字 | 展示登陆还是注册的内容 | 提交时是注册还是登陆 | 渲染样式(login/register)
+`	根据type的值 渲染标题 | 展示登陆还是注册文字 | 展示登陆还是注册的内容 | 提交时是注册还是登陆 | 渲染样式(login/register)`
 
 Accountjs:
-    // 一、使用 rc-form 包进行修改原密码与新密码 | createForm()、getFieldProps()、validateFields()
+ `	使用 rc-form 包进行修改原密码与新密码 | createForm()、getFieldProps()、validateFields()`
 
 UserInfojs:
-    // 一、使用 FilePicker 组件上传头像功能 | axios及token发送到后台
+`	使用 FilePicker 组件上传头像功能 | axios及token发送到后台`
 
 Datajs：
     // 收支构成百分比和饼图
