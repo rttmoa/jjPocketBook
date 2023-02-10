@@ -16,11 +16,9 @@
 
 * [ ] Function组件形式  H5项目
 * [ ] DataJs中    CSS样式书写
-* [ ]
+* [ ] 1
 
 **package.Json：**`classnames | dayjs | lib-flexible | pushstate-server | query-string | rc-form | react-captcha-code | zarm `
-
-
 
 component
     BillItemjs:
