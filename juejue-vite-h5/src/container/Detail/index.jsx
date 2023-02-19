@@ -65,9 +65,10 @@ const Detail = () => {
 
 
   return <div className={s.detail}>
+    {/* detail类名：纵向布局，背景#f5f5f5，padding: 12px 24px 0 24px */}
     <Header title='账单详情' />
-    <div className={s.card}>
 
+    <div className={s.card}>
       <div className={s.type}>
         <span className={cx({ [s.expense]: detail.pay_type == 1, [s.income]: detail.pay_type == 2 })}>
           {/* typeMap 是我们事先约定好的 icon 列表 */}
@@ -92,7 +93,7 @@ const Detail = () => {
         </div>
         <div className={s.remark}>
           <span>备注</span>
-          <span>{ detail.remark || '-' }</span>
+          <span>{ detail.remark || '今天收入/支出' }</span>
         </div>
       </div>
       <div className={s.operation}>
