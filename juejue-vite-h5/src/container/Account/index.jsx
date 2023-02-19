@@ -46,7 +46,9 @@ const Account = (props) => {
 
   return <>
     <Header title="重制密码" />
+
     <div className={s.account}>
+      
       <div className={s.form}>
         <Cell title="原密码">
           <Input

@@ -2,9 +2,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
-  .header {
-    position: fixed;
+  
+  padding-top: 80px; /* 顶部使用padding，让内容区域可以滚动 */
+  .header { 
+    position: fixed; /* 头部 固定定位 */
     top: 0;
     left: 0;
     display: flex;
@@ -64,6 +65,7 @@
       }
     }
   }
+  // 右下角添加按钮
   .add {
     position: fixed;
     bottom: 100px;

@@ -36,7 +36,7 @@ const NavBar = ({ showNav }) => {
           icon={<CustomIcon type="wode" />}
         />
       </TabBar>
-  );
+  )
 };
 
 // 声明 NavBar 函数组件，它接收一个外部传入的 showNav 属性，用于控制导航栏的显示隐藏

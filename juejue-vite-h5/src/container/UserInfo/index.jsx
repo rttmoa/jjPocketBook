@@ -74,6 +74,7 @@ const UserInfo = () => {
 
   return <>
     <Header title='用户信息' />
+    
     <div className={s.userinfo}>
       <h1>个人资料</h1>
       <div className={s.item}>

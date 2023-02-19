@@ -12,10 +12,12 @@
 
 初始化项目：npm init @vitejs/app react-vite-h5 -- --template react
 启动项目：npm run dev
-
+账号密码：adminssss, 123456
 
 H5项目
-    packageJson：
+    package.Json(技术栈)  
+    布局 -> 用户页面布局：中间卡片 和 退出按钮 使用绝对定位居中及阴影
+    布局 -> 
 
 
 

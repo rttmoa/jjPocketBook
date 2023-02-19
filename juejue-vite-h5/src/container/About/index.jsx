@@ -9,6 +9,8 @@ import s from './style.module.less'
 const About = () => {
   return <>
     <Header title='关于我们' />
+
+    {/* 内边距、行高 */}
     <div className={s.about}>
 
       <h2>关于项目</h2>
