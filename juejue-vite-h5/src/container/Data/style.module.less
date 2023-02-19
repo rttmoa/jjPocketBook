@@ -1,6 +1,9 @@
+
+
 .data {
   min-height: 100%;
   background-color: #f5f5f5;
+
   .total {
     background-color: #fff;
     display: flex;
@@ -8,6 +11,7 @@
     align-items: center;
     padding: 24px 0;
     margin-bottom: 10px;
+
     .time {
       position: relative;
       width: 96px;
@@ -20,8 +24,9 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
+      // 使用伪元素新建竖线
       span:nth-of-type(1)::after {
-         content: '';
+        content: '';
         position: absolute;
         top: 9px;
         bottom: 8px;
