@@ -60,12 +60,13 @@ const PopupType = forwardRef(({ onSelect }, ref) => {
     mountContainer={() => document.body}
   >
     <div className={s.popupType}>
+      {/* 让文字水平垂直居中, 让Icon图标绝对定位垂直居中 */}
       <div className={s.header}>
         请选择类型
         <Icon type="wrong" className={s.cross} onClick={() => setShow(false)} />
       </div>
-      <div className={s.content}>
 
+      <div className={s.content}>
         <div onClick={() => choseType({ id: 'all' })} className={cx({ [s.all]: true, [s.active]: active == 'all' })}>
           全部类型
         </div>

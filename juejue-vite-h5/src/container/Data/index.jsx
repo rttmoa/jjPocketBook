@@ -142,7 +142,14 @@ const  Data = () => {
       <div className={s.head}>
         <span className={s.title}>收支构成</span>
         <div className={s.tab}>
-          <span onClick={() => changeTotalType('expense')} className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}>支出</span>
+          {/* <span>支出</span><span>收入</span> */}
+          <span
+            onClick={() => changeTotalType('expense')} 
+            // classnames的使用
+            className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
+          >
+              支出
+            </span>
           <span
             onClick={() => { /* console.log([s.income]); */ return changeTotalType('income') }} 
             className={cx({ [s.income]: true, [s.active]: totalType == 'income' })}
@@ -150,7 +157,7 @@ const  Data = () => {
             收入
           </span>
         </div>
-      </div> 
+      </div>
       <div className={s.content}>
         {
           (totalType == 'expense' ? expenseData : incomeData).map(item => <div key={item.type_id} className={s.item}>
@@ -186,7 +193,7 @@ const  Data = () => {
             <span onClick={() => changePieType('income')} className={cx({ [s.income]: true, [s.active]: pieType == 'income'  })}>收入</span>
           </div>
         </div>
-        {/* 这是用于放置饼图的 DOM 节点 */}
+        {/* 这是用于放置饼图的 DOM 节点， CSS：宽高 */}
         <div id="proportion"></div>
       </div>
     </div>
