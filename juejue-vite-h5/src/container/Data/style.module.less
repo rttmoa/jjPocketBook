@@ -60,9 +60,10 @@
     padding: 0 16px;
     background-color: #fff;
     margin-bottom: 10px;
+    // 收支构成 头部
     .head {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* 两端对齐 */
       align-items: center;
       padding: 12px 0;
       .title {
@@ -70,6 +71,7 @@
         color: rgba(0, 0, 0, .9);
       }
       .tab {
+        // 收入/支出：行内块,宽高,水平垂直居中,背景颜色,圆角
         span {
           display: inline-block;
           width: 40px;
@@ -80,6 +82,7 @@
           margin-left: 10px;
           border-radius: 4px;
         }
+        // 支出的classNames
         .expense {
           &.active {
             background-color: rgba(0, 127, 255, 0.2);
@@ -94,17 +97,21 @@
         }
       }
     }
+    // 收支构成百分比
     .content {
+
       .item {
         display: flex;
         height: 50px;
         align-items: center;
+
         .left {
           flex: 4;
           display: flex;
           align-items: center;
           justify-content: space-between;
           margin-right: 10px;
+
           .type {
             display: flex;
             align-items: center;
@@ -138,7 +145,7 @@
             flex: 1;
             :global {
               .za-progress__track {
-                background: transparent;
+                // background: transparent;
               }
             }
           }
@@ -151,15 +158,18 @@
     .proportion {
       background-color: #fff;
       padding: 12px;
+
       .head {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 12px 0;
+
         .title {
           font-size: 18px;
           color: rgba(0, 0, 0, .9);
         }
+        // 收入/支出：行内块,宽高,水平垂直居中,背景颜色,圆角
         .tab {
           span {
             display: inline-block;
@@ -171,6 +181,7 @@
             margin-left: 10px;
             border-radius: 4px;
           }
+          // 支出的classNames、
           .expense {
             &.active {
               background-color: rgba(0, 127, 255, 0.2);
