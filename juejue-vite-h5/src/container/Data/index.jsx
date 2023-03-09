@@ -10,6 +10,8 @@ import s from './style.module.less';
 let proportionChart = null   // 用于存放 echart 初始化返回的实例
 
 
+
+
 // 收支构成百分比和饼图
 // 一、根据totalType的类型 判断是收入和支出  
 // 二、使用classnames进行写表达式判断是收入还是支出 || className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
