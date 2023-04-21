@@ -7,7 +7,7 @@ module.exports = (options) => {
   return async function jwtErr(ctx, next) {
     const token = ctx.request.header.authorization; // 若是没有 token，返回的是 null 字符串
     let decode;
-    if(token !== 'null' && token) { // 如果是存在且有效
+    if (token !== 'null' && token) { // 如果是存在且有效
       try {
         decode = ctx.app.jwt.verify(token, options.secret); // 验证token
         await next(); // 继续执行后续的接口逻辑

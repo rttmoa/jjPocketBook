@@ -23,7 +23,6 @@ const Account = (props) => {
 
   // 提交修改方法
   const submit = () => {
-
     // validateFields 获取表单属性元素
     props.form.validateFields(async (error, value) => {
       // console.log(value)

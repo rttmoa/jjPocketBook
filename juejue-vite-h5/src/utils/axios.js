@@ -10,7 +10,6 @@ axios.defaults.headers['Authorization'] = `${localStorage.getItem('token') || nu
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 
-
 // 响应拦截器
 axios.interceptors.response.use(res => {
   if (typeof res.data !== 'object') {
@@ -27,8 +26,6 @@ axios.interceptors.response.use(res => {
     }
     return Promise.reject(res.data)
   }
-
   return res.data
 })
-
 export default axios

@@ -72,6 +72,9 @@ const UserInfo = () => {
     history.goBack()
   }
 
+
+
+  
   return <>
     <Header title='用户信息' />
     
