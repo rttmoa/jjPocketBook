@@ -60,7 +60,7 @@ const User = () => {
         </span>
       </div>
       <img className={s.avatar} style={{ width: 60, height: 60, borderRadius: 8 }} src={avatar} alt="" />
-   </div>
+    </div>
    
    <div className={s.content}>
       <Cell
@@ -89,16 +89,16 @@ const User = () => {
    </div>
    <Button className={s.logout} block theme="danger" onClick={logout}>退出登录</Button>
    <Modal
-      visible={show}
-      title="标题"
-      closable
-      onCancel={() => setShow(false)}
-      footer={
-        <Button block theme="primary" onClick={confirmSig}>
-          确认
-        </Button>
-      }
-    >
+    visible={show}
+    title="标题"
+    closable
+    onCancel={() => setShow(false)}
+    footer={
+      <Button block theme="primary" onClick={confirmSig}>
+        确认
+      </Button>
+    }
+  >
     <Input
         autoHeight
         showLength

@@ -96,6 +96,7 @@ const Home = () => {
     setPage(1);
     setCurrentSelect(item)
   }
+
   // 筛选月份
   const selectMonth = (item) => {
     setRefreshing(REFRESH_STATE.loading);
@@ -104,6 +105,8 @@ const Home = () => {
   }
 
 
+
+  
 
   return <div className={s.home}>
 

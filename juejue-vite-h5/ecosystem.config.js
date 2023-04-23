@@ -7,8 +7,7 @@
 //     https://www.cnblogs.com/lggggg/p/6970395.html
 
 module.exports = {
-  apps: [
-    {
+  apps: [{
       name: 'juejue-vite-h5',
       script: 'juejue-vite-h5-server.js'
     },

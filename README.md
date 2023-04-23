@@ -59,16 +59,22 @@ UserInfojs:
 `	使用 FilePicker 组件上传头像功能 | axios及token发送到后台`
 
 Datajs：
-    // 收支构成百分比和饼图
+
+```
+收支构成百分比和饼图
     // 一、根据totalType的类型 判断是收入和支出
     // 二、使用classnames进行写表达式判断是收入还是支出 || className={cx({ [s.expense]: true, [s.active]: totalType == 'expense' })}
     // 三、收支构成即渲染支出数据又渲染收入数据 | 根据classnames及表达式渲染类型
     // 四、进度条渲染百分比
-    // 五、根据页面内日期变化发请求 const { data } = await get(`/api/bill/data?date=${currentMonth}`);
+    // 五、根据页面内日期变化发请求 const { data } = await get(/api/bill/data?date=${currentMonth});
+```
 
 Detailjs：
-    // 一、进入账单详情页面 使用 query-string 包将地址栏中的参数 转换为对象格式 || qs.parse("?id=917&uname=zhangsan") // {id: '917', uname: 'zhangsan'}
+
+```
+// 一、进入账单详情页面 使用 query-string 包将地址栏中的参数 转换为对象格式 || qs.parse("?id=917&uname=zhangsan") // {id: '917', uname: 'zhangsan'}
     // 二、使用dayjs格式化日期
-    // 三、前台获取后台接口数据 使用 `/api/bill/detail?id=${id}`格式获取
+    // 三、前台获取后台接口数据 使用 /api/bill/detail?id=${id}格式获取
+```
 
 HomeJs：

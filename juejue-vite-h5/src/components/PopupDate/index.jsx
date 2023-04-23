@@ -8,7 +8,7 @@ import dayjs from 'dayjs'
 
 /***--- 顶部时间筛选：便于后续数据页面的时间筛选 ---**/
 
-const PopupDate = forwardRef(( {onSelect, mode = 'date'} , ref) => {
+const PopupDate = forwardRef(({onSelect, mode = 'date'} , ref) => {
   
   const [show, setShow] = useState(false)
   const [now, setNow] = useState(new Date())

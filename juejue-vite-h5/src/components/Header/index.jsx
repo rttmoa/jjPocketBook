@@ -5,6 +5,10 @@ import { NavBar, Icon } from 'zarm';
 
 import s from './style.module.less'
 
+
+
+
+
 const Header = ({ title = '' }) => {
   const history = useHistory()
   return <div className={s.headerWarp}>

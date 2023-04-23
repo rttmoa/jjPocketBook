@@ -62,7 +62,7 @@ const BillItem = ({ bill }) => {
         className={s.bill}
         key={item.id}
         onClick={() => goToDetail(item)}
-        title={
+        title = {
           <>
             <CustomIcon
               className={s.itemIcon}

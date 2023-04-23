@@ -28,7 +28,7 @@ const Login = () => {
 
   //  验证码变化，回调方法、输入的图片验证码
   const handleChange = useCallback((captcha) => {
-    console.log('captcha', captcha)
+    // console.log('captcha', captcha)
     setCaptcha(captcha)
   }, []);
   
