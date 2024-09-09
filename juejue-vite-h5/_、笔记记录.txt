@@ -13,19 +13,11 @@
 初始化项目：npm init @vitejs/app react-vite-h5 -- --template react
 启动项目：npm run dev
 账号密码：adminssss, 123456
-
-H5项目
-    package.Json(技术栈)  
-    布局 -> 用户页面布局：中间卡片 和 退出按钮 使用绝对定位居中及阴影
-    布局 -> 
-
-
-
+  
 component
-    BillItemjs:
-    NavBarjs:
-    PopupAddBilljs:
-
+    BillItemjs
+    NavBarjs
+    PopupAddBilljs
 
 mainjs：
     // 一、使用 lib-flexible 包适配rem移动端项目
@@ -57,5 +49,4 @@ Detailjs：
     // 一、进入账单详情页面 使用 query-string 包将地址栏中的参数 转换为对象格式 || qs.parse("?id=917&uname=zhangsan") // {id: '917', uname: 'zhangsan'}
     // 二、使用dayjs格式化日期
     // 三、前台获取后台接口数据 使用`/api/bill/detail?id=${id}`格式获取
-
-HomeJs：
+ 

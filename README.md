@@ -1,10 +1,10 @@
-# 掘掘记账本
+# jj记账本
 
 *初始化项目*：`npm init @vitejs/app react-vite-h5 -- --template react`
 
 *启动项目*：`npm run dev`
 
-**知识点==>**
+主要内容：
 
 1. 构架工具 Vite。
 2. 前端框架 React 和路由 react-router-dom。
@@ -13,10 +13,6 @@
 5. 移动端分辨率适配 flexible。
 6. 跨域代理。
 7. useRef()
-
-* [ ] Function组件形式  H5项目
-* [ ] DataJs中    CSS样式书写
-* [ ] 1
 
 **package.Json：**`classnames | dayjs | lib-flexible | pushstate-server | query-string | rc-form | react-captcha-code | zarm `
 
@@ -76,5 +72,3 @@ Detailjs：
     // 二、使用dayjs格式化日期
     // 三、前台获取后台接口数据 使用 /api/bill/detail?id=${id}格式获取
 ```
-
-HomeJs：
